@@ -24,13 +24,8 @@ namespace Handcuffing
                 response = "Это нельзя связать!";
                 return false;
             }
-            
-            if (pl.IsCuffed)
-                pl.RemoveHandcuffs();
-            else
-                pl.Handcuff(player);
-
-            response = pl.IsCuffed ? "Игрок связан успешно" : "Игрок отпущен";
+            pl.Handcuff(player);
+            response = "Игрок связан успешно";
             return false;
         }
 
